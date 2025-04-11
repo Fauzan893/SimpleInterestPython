@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Engagement Rate</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #007bff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+h3 {
+    margin-top: 20px;
+    color: #28a745;
+}
+</style>
+<body>
+
+    </style>
+    <div class="container">
+        <h2>Kalkulator Engagement Rate</h2>
+        <form method="POST">
+            <label>Jumlah Likes:</label>
+            <input type="number" name="likes" required>
+            <label>Jumlah Comments:</label>
+            <input type="number" name="comments" required>
+            <label>Jumlah Shares:</label>
+            <input type="number" name="shares" required>
+            <label>Total Followers:</label>
+            <input type="number" name="followers" required>
+            <button type="submit">Hitung</button>
+        </form>
+        {% if er is defined and er is not none %}
+            <h3>Engagement Rate: {{ er }}%</h3>
+        {% endif %}
+    </div>
+</body>
+</html>
