@@ -1,0 +1,5 @@
+Nama: Muhammad Fauzan Ali Fatah
+Nim: 240907500027
+Kelas: C
+
+# DESKRIPSI LEMBAR KERJA SIMPLE INTEREST
